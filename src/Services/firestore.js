@@ -64,3 +64,67 @@ export async function createOrder(order) {
   return (docOrder.id)
 
 }
+
+export async function exportArrayToFirestore(){
+  const products = [ 
+    {
+      id: 1,
+      title: "GT 1030",
+      price: 70,
+      stock: 29,
+      category: "Tarjetas",
+      imgurl: "/imgs/gt1030.jpg",
+      description: "Tarjeta de video de 2gb de vram",
+    },
+    {
+      id: 2,
+      title: "GTX 1660",
+      price: 150,
+      stock: 15,
+      category: "Tarjetas",
+      imgurl: "/imgs/gtx1660.jpg",
+      description:"Tarjeta de video de 6gb de vram",
+    },
+    {
+      id: 3,
+      title: "RTX 3090",
+      price: 400,
+      stock: 9,
+      category: "Tarjetas",
+      imgurl: "/imgs/rtx3090.jpg",
+      description:"Tarjeta de video de 12 gb de vram",
+    },
+    {
+      id: 4,
+      title: "INTEL core i3",
+      price: 50,
+      stock: 23,
+      category: "Procesadores",
+      imgurl: "/imgs/Intel.jpg",
+      description: "Procesador intel de gama baja",
+    },
+    {
+      id: 5,
+      title: "INTEL Core i5",
+      price: 100,
+      stock: 26,
+      category: "Procesadores",
+      imgurl: "/imgs/Intel.jpg",
+      description:"Procesador intel de gama media",
+    },
+    {
+      id: 6,
+      title: "INTEL Core i7",
+      price: 200,
+      stock: 14,
+      category: "Procesadores",
+      imgurl: "/imgs/Intel.jpg",
+      description:"Procesador intel de gama alta",
+    },
+  
+  ]
+  const collectionRef = collection(DB, "productos")
+  
+
+
+}

@@ -1,16 +1,18 @@
-import React from "react"
+import React, { StrictMode } from "react"
 import "./App.css"
 import ItemDetailContainer from "./components/ItemDetail/ItemDetailContainer"
 import ItemListContainer from "./components/ItemList/ItemListContainer"
 import NavBar from "./components/NavBar/NavBar"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { CartContextProvider } from "./context/cartContext"
 import CartView from "./components/CartView/CartView"
 import ThankYou from "./components/ThankYou/ThankYou"
+import { CartContextProvider } from "./context/cartContext"
+
 
 function App() {
   return (
     <div className="App">
+      <StrictMode>
       <CartContextProvider>
         <BrowserRouter>
           <NavBar />
@@ -24,6 +26,7 @@ function App() {
           </Routes>
         </BrowserRouter>
       </CartContextProvider>
+      </StrictMode>
     </div>
   );
 }
