@@ -25,7 +25,7 @@ function App() {
             <Route  path="*" element={<h1>Error 404: Está página no existe</h1>} />
           </Routes>
         </BrowserRouter>
-      </CartContextProvider>
+        </CartContextProvider>
       </StrictMode>
     </div>
   );

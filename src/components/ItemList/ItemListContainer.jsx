@@ -21,9 +21,6 @@ function ItemListContainer() {
 
   useEffect(() => {
     getItemsAsync();
-    return () => {
-      console.log("Componente desmontado");
-    };
   }, [idCategory]);
 
   return (

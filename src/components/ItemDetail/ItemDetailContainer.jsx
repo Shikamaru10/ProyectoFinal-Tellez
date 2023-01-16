@@ -11,21 +11,21 @@ function ItemDetailContainer() {
   const { idItem } = useParams();
 
   async function getItemsAsync() {
-    getSingleItem(idItem).then( respuesta => {
+    getSingleItem(idItem).then((respuesta) => {
       setProduct(respuesta);
       setIsLoading(false);
     })
   }
 
   useEffect(() => {
-    getItemsAsync();
+    getItemsAsync()
   }, []);
 
   if(isLoading)
     return (<Loader/>);
 
-  return (  
-     <ItemDetail product={product} />
+  return (  <ItemDetail product={product}/>
+  
   )
 }
 export default ItemDetailContainer;

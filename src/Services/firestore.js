@@ -30,7 +30,7 @@ return documentsData;
 }
 
 export async function getSingleItem(idParams){
-  const docRef = doc(DB, "productos", "IdParams" )
+  const docRef = doc(DB, "productos", idParams )
 
   const docSnapshot = await getDoc (docRef) 
 
